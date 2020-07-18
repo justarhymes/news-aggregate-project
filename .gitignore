@@ -3,3 +3,5 @@ __generated__
 temp
 .env
 node_modules
+.vscode
+dist
