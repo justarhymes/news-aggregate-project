@@ -84,6 +84,13 @@ yarn serve
 
 The client app can be reached at `http://localhost:8080`.
 
+## Notes
+
+- I wanted to go with a GraphQL based system on this, because of how nicely it can pull together APIs from different sources into one.
+- Apollo is a very well kept and popular library, so it made sense to use that to tie everything together on both the BE and FE.
+- I selected MongoDB just because I know it better than most other DB providers. Postgres was an option too, but I'm not as familiar setting that up with Node.
+- I made use of Express too, even though I didn't quite need it for how this is set up, but I think it works nicely with Apollo, and would be even better if there were other routing options coming from the server (such as if this was a monolith web app).
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
