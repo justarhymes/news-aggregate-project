@@ -2,11 +2,7 @@ import Save from '../../models/savedModel';
 
 export default {
   Query: {
-    saves: async () => {
-      console.log('resolver:');
-      console.log(Save);
-      return await Save.find({});
-    },
+    saves: async () => await Save.find({}),
   },
   Mutation: {
     saveArticle: async (_, args) => {
@@ -14,6 +10,6 @@ export default {
       const newSave = new Save({ title, url });
       return await newSave.save();
     },
-    unsaveArticle: (_, url) => Save.findOneAndDelete({ url }),
+    unsaveArticle: (_, args) => Save.findOneAndDelete({ url: args.url }),
   },
 };
